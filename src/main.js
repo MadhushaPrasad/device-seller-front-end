@@ -19,5 +19,5 @@ window.$ = $;
 createApp(App)
   .use(store)
   .use(router)
-  .component("font-awsome-icon", FontAwesomeIcon)
+  .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");
