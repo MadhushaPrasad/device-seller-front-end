@@ -16,35 +16,43 @@
 
       <div class="me-auto navbar-nav">
         <li class="nav-item">
-          <a
-            href="/admin"
+          <router-link
+            to="/admin"
             class="nav-link"
-          >Admin</a>
+          >
+            Admin
+          </router-link>
         </li>
         <li class="nav-item">
-          <a
-            href="/home"
+          <router-link
+            to="/home"
             class="nav-link"
-          >Home</a>
+          >
+            Home
+          </router-link>
         </li>
       </div>
 
       <div class="ms-auto navbar-nav">
         <li class="nav-item">
-          <a
-            href="/register"
+          <router-link
+            to="/register"
             class="nav-link"
-          >Signup</a>
+          >
+            Signup
+          </router-link>
         </li>
         <li class="nav-item">
-          <a
-            href="/login"
+          <router-link
+            to="/login"
             class="nav-link"
-          >Login</a>
+          >
+            Login
+          </router-link>
         </li>
       </div>
     </nav>
-    <div class="container">
+    <div class="p-4 container">
       <router-view />
     </div>
   </div>
@@ -55,7 +63,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
