@@ -1,5 +1,48 @@
 <template>
-  <div>Hello World</div>
+  <nav class="bg-dark navbar navbar-expand navbar-dark">
+    <a
+      href="#"
+      class="ms-1 navbar-brand"
+    >
+      <img
+        src="./assets/logo.png"
+        width="40"
+        alt="Vue logo"
+      >
+
+      Vue
+    </a>
+
+    <div class="me-auto navbar-nav">
+      <li class="nav-item">
+        <a
+          href="/admin"
+          class="nav-link"
+        >Admin</a>
+      </li>
+      <li class="nav-item">
+        <a
+          href="/home"
+          class="nav-link"
+        >Home</a>
+      </li>
+    </div>
+
+    <div class="ms-auto navbar-nav">
+      <li class="nav-item">
+        <a
+          href="/register"
+          class="nav-link"
+        >Signup</a>
+      </li>
+      <li class="nav-item">
+        <a
+          href="/login"
+          class="nav-link"
+        >Login</a>
+      </li>
+    </div>
+  </nav>
 </template>
 
 <style>
