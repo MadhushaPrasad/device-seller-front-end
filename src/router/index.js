@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import Login from "../views/Login.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: Login,
   },
   {
-    path: "/about",
+    path: "/register",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
