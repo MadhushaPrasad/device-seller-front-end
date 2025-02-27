@@ -8,40 +8,41 @@ import Admin from "@/views/Admin.vue";
 const routes = [
   {
     path: "/",
-    component: Home,
-  },
-  {
-    path: "home",
     name: "Home",
     component: Home,
   },
   {
-    path: "login",
+    path: "/home",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/login",
     name: "Login",
     component: Login,
   },
   {
-    path: "register",
+    path: "/register",
     name: "Register",
     component: Register,
   },
   {
-    path: "profile",
+    path: "/profile",
     name: "Profile",
     component: Profile,
   },
   {
-    path: "admin",
+    path: "/admin",
     name: "Admin",
     component: Admin,
   },
   {
-    path: "404",
+    path: "/not-found",
     name: "/404",
     component: Login,
   },
   {
-    path: "401",
+    path: "/unauthorized",
     name: "/401",
     component: Login,
   }
