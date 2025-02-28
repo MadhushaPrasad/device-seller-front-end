@@ -1,3 +1,4 @@
+import UnoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -9,6 +10,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    UnoCSS()
   ],
   resolve: {
     alias: {
