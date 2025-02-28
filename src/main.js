@@ -1,23 +1,14 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import './assets/main.css'
 
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import App from './App.vue'
+import router from './router'
 
-library.add(faHome);
+const app = createApp(App)
 
-global.jQuery = require("jquery");
-var $ = global.jQuery;
-window.$ = $;
+app.use(createPinia())
+app.use(router)
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .component("font-awesome-icon", FontAwesomeIcon)
-  .mount("#app");
+app.mount('#app')
