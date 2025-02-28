@@ -1,5 +1,5 @@
 export default class User {
-  constructor(id,username,password,name,role,token) {
+  constructor(id, username, password, name, role, token) {
     this.id = id
     this.username = username
     this.password = password

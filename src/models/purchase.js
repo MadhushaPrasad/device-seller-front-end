@@ -1,5 +1,5 @@
 export default class Purchase {
-  constructor(id, userId, deviceId,price, color, purchaseTime) {
+  constructor(id, userId, deviceId, price, color, purchaseTime) {
     this.id = id
     this.userId = userId
     this.deviceId = deviceId
