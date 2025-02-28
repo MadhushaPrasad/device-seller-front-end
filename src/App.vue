@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </nav>
 
-    <div class="p-4 container">
+    <div class="mx-auto p-4 max-w-7xl">
       <RouterView />
     </div>
   </div>

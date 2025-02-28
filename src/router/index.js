@@ -4,6 +4,8 @@ import Home from '@/views/Home.vue'
 import Register from '@/views/Register.vue'
 import Profile from '@/views/Profile.vue'
 import Admin from '@/views/Admin.vue'
+import UnauthorizedAccess from '@/views/UnauthorizedAccess.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,12 +42,12 @@ const router = createRouter({
     {
       path: '/not-found',
       name: '/404',
-      component: Login,
+      component: NotFound,
     },
     {
       path: '/unauthorized',
       name: '/401',
-      component: Login,
+      component: UnauthorizedAccess,
     },
     {
       path: '/about',
