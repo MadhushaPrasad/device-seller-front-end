@@ -127,7 +127,6 @@ export default {
   methods: {
     ...vuex.mapActions(['updateUser']),
     dismissAlert() {
-      console.log('dismiss')
       this.dismiss = true
     },
     handleLogin() {
@@ -142,7 +141,7 @@ export default {
         .login(this.formData)
         .then((response) => {
           this.updateUser(response.data)
-          this.this.$router.push('/profile')
+          this.$router.push('/profile')
         })
         .catch((error) => {
           console.error(error)

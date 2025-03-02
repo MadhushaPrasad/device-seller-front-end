@@ -136,7 +136,6 @@ export default {
 
   methods: {
     dismissAlert() {
-      console.log('dismiss')
       this.dismiss = true
     },
     handleRegister() {
