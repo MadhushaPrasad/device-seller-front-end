@@ -3,8 +3,19 @@
 </template>
 
 <script>
+import User from '@/models/user'
 export default {
-  name: 'Register',
+  name: 'RegisterView',
+  data() {
+    return {
+      formData: new User(),
+      loading: false,
+      submitted: false,
+      errorMessages: '',
+    }
+  },
+
+  methods: {},
 }
 </script>
 
