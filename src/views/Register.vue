@@ -99,10 +99,10 @@
               </button>
               <p class="font-light text-gray-500 dark:text-gray-400 text-sm">
                 Already have an account?
-                <a
-                  href="#"
+                <RouterLink
+                  to="login"
                   class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                  >Login here</a
+                  >Login here</RouterLink
                 >
               </p>
             </form>

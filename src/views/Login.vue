@@ -83,10 +83,10 @@
               </button>
               <p class="font-light text-gray-500 dark:text-gray-400 text-sm">
                 Don't have an account?
-                <a
-                  href="#"
+                <RouterLink
+                  to="register"
                   class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                  >Register here</a
+                  >Register here</RouterLink
                 >
               </p>
             </form>
