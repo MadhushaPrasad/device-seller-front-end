@@ -4,7 +4,7 @@ import { createApp } from 'vue'
 import store from '@/stores'
 
 import App from './App.vue'
-import router from './router'
+import router from './router/index'
 
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
