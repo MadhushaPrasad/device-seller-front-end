@@ -12,7 +12,7 @@
           </a>
           <div class="hidden lg:flex lg:gap-x-12">
             <div class="flex space-x-4 ml-6">
-              <RouterLink to="/admin" class="hover:text-gray-300">Admin</RouterLink>
+              <RouterLink to="/admin" v-if="isAdmin" class="hover:text-gray-300">Admin</RouterLink>
               <RouterLink to="/home" class="hover:text-gray-300">Home</RouterLink>
             </div>
           </div>
@@ -40,9 +40,15 @@
             </svg>
           </button>
         </div>
-        <div class="hidden lg:flex">
+        <div class="hidden lg:flex" v-if="!currentUser">
           <RouterLink to="/register" class="mr-4 hover:text-gray-300">Signup</RouterLink>
           <RouterLink to="/login" class="hover:text-gray-300">Login</RouterLink>
+        </div>
+        <div class="hidden lg:flex" v-if="currentUser">
+          <RouterLink to="/profile" class="mr-4 hover:text-gray-300">{{
+            currentUser.name
+          }}</RouterLink>
+          <a href="#" class="hover:text-gray-300" @click="logout">logout</a>
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
@@ -100,10 +106,27 @@
 </template>
 
 <script>
+import Role from '@/models/role'
+import vuex from 'vuex'
+
 export default {
   name: 'HeaderComponent',
+
+  computed: {
+    ...vuex.mapGetters(['currentUser']),
+
+    isAdmin() {
+      return this.currentUser?.role === Role.ADMIN
+    },
+  },
+  methods: {
+    ...vuex.mapActions(['clearUser']),
+    logout() {
+      this.clearUser()
+      this.$router.push('/login')
+    },
+  },
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
