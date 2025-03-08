@@ -7,7 +7,6 @@ import { authHeader } from './base.service'
 const API_URL = `${BASE_API_URL}devices`
 
 class DeviceService {
-
   saveDevice = async (device) => {
     const response = await axios.post(API_URL, device, { headers: authHeader() })
     return response
@@ -18,14 +17,10 @@ class DeviceService {
     return response
   }
 
-
   getAllDevices = async () => {
     const response = await axios.get(API_URL)
     return response
   }
-
-
 }
-
 
 export default new DeviceService()
