@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import { authHeader } from './base.service'
 
-const API_URL = `${BASE_API_URL}device`
+const API_URL = BASE_API_URL + 'device'
 
 class DeviceService {
   saveDevice(device) {
@@ -18,7 +18,7 @@ class DeviceService {
   }
 
   getAllDevices() {
-    const response = axios.get(API_URL)
+    const response = axios.get(API_URL, { headers: authHeader() })
     return response
   }
 }
