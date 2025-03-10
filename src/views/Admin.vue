@@ -36,7 +36,7 @@
           <tr
             class="bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600 dark:bg-gray-800 border-gray-200 dark:border-gray-700 border-b"
           >
-            <td class="p-4 w-4">
+            <td class="p-4 w-4" v-for="device in deviceList" :key="device.id">
               <div class="flex items-center">
                 <input
                   id="checkbox-table-search-1"
@@ -47,11 +47,12 @@
               </div>
             </td>
             <th scope="row" class="px-6 py-4 font-medium dark:text-white whitespace-nowrap">
-              Apple MacBook Pro 17"
+              {{ device.name }}
             </th>
-            <td class="px-6 py-4">Silver</td>
-            <td class="px-6 py-4">Laptop</td>
-            <td class="px-6 py-4">Yes</td>
+            <td class="px-6 py-4">{{ device.price }}</td>
+            <td class="px-6 py-4">{{ device.type }}</td>
+            <td class="px-6 py-4">{{ device.createTime }}</td>
+            <td class="px-6 py-4">{{ device.deviceType }}</td>
             <td class="flex items-center px-6 py-4">
               <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >Edit</a
